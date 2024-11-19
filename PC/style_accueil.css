@@ -1,0 +1,72 @@
+html {
+    background-color: rgb(199, 189, 167);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border: black solid;
+    border-radius: 50px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 1em;
+}
+
+p {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.peinture1 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture3 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture4 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture5 {
+    padding: 10px;
+    margin: 10px;
+}
