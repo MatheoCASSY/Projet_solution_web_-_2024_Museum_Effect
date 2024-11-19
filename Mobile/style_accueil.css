@@ -72,3 +72,8 @@ p {
     padding: 10px;
     margin: 10px;
 }
+
+.qrcode {
+    display: flex;
+    justify-content: center;
+}
