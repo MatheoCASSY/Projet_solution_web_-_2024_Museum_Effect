@@ -5,6 +5,7 @@ def main():
         elif responses == 2:print("reponse 2")
         elif responses == 3:print("reponse 3")
         elif responses == 4:exit("bonne continuation")
+        else: input("la réponse >>> ")
 print(main())
 
 
