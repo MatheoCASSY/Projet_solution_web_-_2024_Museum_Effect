@@ -1,0 +1,50 @@
+html {
+    background-color: rgb(167, 190, 199);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 1em;
+}
+
+p {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.peinture1 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture3 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture4 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture5 {
+    padding: 10px;
+    margin: 10px;
+}
