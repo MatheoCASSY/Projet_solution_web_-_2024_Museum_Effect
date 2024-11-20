@@ -47,6 +47,7 @@
         <img src="../Ressources_en_communs/qr_code.png" width="150">
     </div>
     <button id="backToTop">↑</button>
+    <div id="progressBar"></div>
     <script>
         const menuLinks = document.querySelectorAll('header a');
         menuLinks.forEach(link => {
@@ -115,6 +116,12 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progressBar').style.height = `${progress}%`;
         });
 
     </script>

@@ -106,3 +106,13 @@ footer a {
 #backToTop:hover {
     background: #C70039;
 }
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: #FF5733;
+    z-index: 1000;
+}
