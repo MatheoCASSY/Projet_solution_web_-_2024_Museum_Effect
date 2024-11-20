@@ -91,3 +91,20 @@ footer a {
     display: flex;
     justify-content: center;
 }
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop:hover {
+    background: #C70039;
+}
