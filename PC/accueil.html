@@ -123,7 +123,6 @@
             cursor.style.left = `${e.clientX}px`;
             cursor.style.top = `${e.clientY}px`;
         });
-        // Style initial
         cursor.style.position = 'absolute';
         cursor.style.width = '30px';
         cursor.style.height = '30px';
@@ -132,6 +131,13 @@
         cursor.style.pointerEvents = 'none';
         cursor.style.transition = 'transform 0.1s ease';
         cursor.style.transform = 'translate(-50%, -50%)';
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progressBar').style.height = `${progress}%`;
+        });
+
     </script>
     <script>
         const image = document.querySelectorAll('.container img');
