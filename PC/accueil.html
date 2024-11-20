@@ -19,23 +19,23 @@
         <a href="#Informations">Informations</a>
     </header>
     <div class="container">
-        <div class="image1 zoom">
+        <div class="image1 ">
             <img src="../Ressources_en_communs/peinture1.jpg" width="400">
             <p>Abstrait</p>
         </div>
-        <div class="image2 zoom">
+        <div class="image2 ">
             <img src="../Ressources_en_communs/peinture2.jpg" width="400">
             <p>Abstrait 2</p>
         </div>
-        <div class="image3 zoom">
+        <div class="image3 ">
             <img src="../Ressources_en_communs/peinture3.jpg" width="400">
             <p>Abstrait 3</p>
         </div>
-        <div class="image4 zoom">
+        <div class="image4 ">
             <img src="../Ressources_en_communs/peinture4.jpg" width="400">
             <p>Abstrait 4</p>
         </div>
-        <div class="image5 zoom">
+        <div class="image5 ">
             <img src="../Ressources_en_communs/peinture5.jpg" width="400">
             <p>Abstrait 5</p>
         </div>
@@ -131,6 +131,20 @@
         cursor.style.pointerEvents = 'none';
         cursor.style.transition = 'transform 0.1s ease';
         cursor.style.transform = 'translate(-50%, -50%)';
+    </script>
+    <script>
+        const image = document.querySelectorAll('.container img');
+
+        images.forEach((image) => {
+            image.addEventListener('mouseenter', () => {
+                image.style.transform = 'scale(1.3)';
+                image.style.transition = 'transform 0.3s ease-in-out';
+            });
+
+            image.addEventListener('mouseleave', () => {
+                image.style.transform = 'scale(1)';
+            });
+        });
     </script>
 </body>
 <footer>
