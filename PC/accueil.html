@@ -122,6 +122,15 @@
             cursor.style.left = `${e.clientX}px`;
             cursor.style.top = `${e.clientY}px`;
         });
+        // Style initial
+        cursor.style.position = 'absolute';
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+        cursor.style.borderRadius = '50%';
+        cursor.style.backgroundColor = '#FF5733';
+        cursor.style.pointerEvents = 'none';
+        cursor.style.transition = 'transform 0.1s ease';
+        cursor.style.transform = 'translate(-50%, -50%)';
     </script>
 </body>
 <footer>
