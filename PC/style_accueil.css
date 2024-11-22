@@ -96,7 +96,8 @@ footer a {
     height: 200px;
     overflow: hidden;
     position: relative;
-    background-color: #f0f0f0;
+    background-color: rgb(199, 189, 167);
+    overflow: visible;
 }
 
 .slider {
@@ -107,10 +108,13 @@ footer a {
 }
 
 .slider img {
+    margin: 0 15px;
     flex-shrink: 0;
     width: max-content;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 @keyframes scroll {
@@ -152,11 +156,6 @@ footer a {
     height: 0;
     background: #FF5733;
     z-index: 1000;
-}
-
-.slider img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .slider img:hover {
