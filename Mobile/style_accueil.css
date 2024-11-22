@@ -92,6 +92,43 @@ footer a {
     justify-content: center;
 }
 
+.slider-container {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+}
+
+.slider img {
+    flex-shrink: 0;
+    width: max-content;
+    height: 200px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
 #backToTop {
     position: fixed;
     bottom: 20px;

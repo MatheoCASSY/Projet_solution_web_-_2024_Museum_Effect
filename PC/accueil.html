@@ -44,123 +44,37 @@
             <img src="../Ressources_en_communs/qr_code.png" alt="QR Code" width="150">
         </div>
     </div>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="../Ressources_en_communs/peinture1.jpg" alt="Image 1">
+            <img src="../Ressources_en_communs/peinture2.jpg" alt="Image 2">
+            <img src="../Ressources_en_communs/peinture3.jpg" alt="Image 3">
+            <img src="../Ressources_en_communs/peinture4.jpg" alt="Image 4">
+            <img src="../Ressources_en_communs/peinture5.jpg" alt="Image 5">
+            <img src="../Ressources_en_communs/peinture6.jpg" alt="Image 6">
+            <img src="../Ressources_en_communs/peinture7.jpg" alt="Image 7">
+            <img src="../Ressources_en_communs/peinture8.jpg" alt="Image 8">
+            <img src="../Ressources_en_communs/peinture9.jpg" alt="Image 9">
+            <img src="../Ressources_en_communs/peinture10.jpg" alt="Image 10">
+            <img src="../Ressources_en_communs/peinture1.jpg" alt="Image 1">
+            <img src="../Ressources_en_communs/peinture2.jpg" alt="Image 2">
+            <img src="../Ressources_en_communs/peinture3.jpg" alt="Image 3">
+            <img src="../Ressources_en_communs/peinture4.jpg" alt="Image 4">
+            <img src="../Ressources_en_communs/peinture5.jpg" alt="Image 5">
+            <img src="../Ressources_en_communs/peinture6.jpg" alt="Image 6">
+            <img src="../Ressources_en_communs/peinture7.jpg" alt="Image 7">
+            <img src="../Ressources_en_communs/peinture8.jpg" alt="Image 8">
+            <img src="../Ressources_en_communs/peinture9.jpg" alt="Image 9">
+            <img src="../Ressources_en_communs/peinture10.jpg" alt="Image 10">
+        </div>
+    </div>
     <button id="backToTop">↑</button>
     <div id="progressBar"></div>
-    <script>
-        const menuLinks = document.querySelectorAll('header a');
-        menuLinks.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                link.style.color = '#FF5733';
-                link.style.transform = 'scale(1.1)';
-                link.style.transition = 'all 0.3s ease';
-            });
-
-            link.addEventListener('mouseleave', () => {
-                link.style.color = '';
-                link.style.transform = 'scale(1)';
-            });
-        });
-        const images = document.querySelectorAll('.container img');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transform = 'scale(1)';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                } else {
-                    entry.target.style.transform = 'scale(0.8)';
-                    entry.target.style.opacity = '0';
-                }
-            });
-        });
-
-        images.forEach(image => {
-            image.style.transform = 'scale(0.8)';
-            image.style.opacity = '0';
-            observer.observe(image);
-        });
-        const logo = document.querySelector('.logo img');
-
-        logo.addEventListener('click', () => {
-            logo.style.transition = 'transform 0.5s ease';
-            logo.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                logo.style.transform = 'rotate(0deg)';
-            }, 500);
-        });
-        const qrCode = document.querySelector('.qrcode img');
-
-        qrCode.addEventListener('mouseenter', () => {
-            qrCode.style.boxShadow = '0 0 20px #FF5733';
-            qrCode.style.transition = 'box-shadow 0.3s ease';
-        });
-
-        qrCode.addEventListener('mouseleave', () => {
-            qrCode.style.boxShadow = '';
-        });
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        const cursor = document.createElement('div');
-        cursor.id = 'customCursor';
-        document.body.appendChild(cursor);
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
-        });
-        cursor.style.position = 'absolute';
-        cursor.style.width = '30px';
-        cursor.style.height = '30px';
-        cursor.style.borderRadius = '50%';
-        cursor.style.backgroundColor = '#FF5733';
-        cursor.style.pointerEvents = 'none';
-        cursor.style.transition = 'transform 0.1s ease';
-        cursor.style.transform = 'translate(-50%, -50%)';
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const progress = (scrollTop / docHeight) * 100;
-            document.getElementById('progressBar').style.height = `${progress}%`;
-        });
-        const image = document.querySelectorAll('.container img');
-
-        images.forEach((image) => {
-            image.addEventListener('mouseenter', () => {
-                image.style.transform = 'scale(1.2)';
-                image.style.transition = 'transform 0.3s ease-in-out';
-            });
-
-            image.addEventListener('mouseleave', () => {
-                image.style.transform = 'scale(1)';
-            });
-        });
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const progress = (scrollTop / docHeight) * 100;
-            document.getElementById('progressBar').style.height = `${progress}%`;
-        });
-
-    </script>
+    <footer>
+        <p> 2024 Museum Effect. Tous droits réservés.</p>
+        <a href="./Formulaire/formulaire.php">Nous contacter</a>
+    </footer>
 </body>
-<footer>
-    <p> 2024 Museum Effect. Tous droits réservés.</p>
-    <a href="./Formulaire/formulaire.php">Nous contacter</a>
-</footer>
+<script src="script.js"></script>
 
 </html>
