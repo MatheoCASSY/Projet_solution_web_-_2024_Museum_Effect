@@ -118,3 +118,19 @@ slider.addEventListener('mouseleave', () => {
     isPaused = false;
     slider.style.animationPlayState = 'running';
 });
+
+
+
+const sliderImages = document.querySelectorAll('.slider img');
+
+sliderImages.forEach(image => {
+    image.addEventListener('mouseenter', () => {
+        image.style.transform = 'scale(1.3)';
+        image.style.boxShadow = '0 0 20px rgba(255, 87, 51, 1)';
+    });
+
+    image.addEventListener('mouseleave', () => {
+        image.style.transform = 'scale(1)';
+        image.style.boxShadow = '';
+    });
+});
