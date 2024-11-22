@@ -21,7 +21,7 @@
     <div class="container">
         <div class="image1 ">
             <img src="../Ressources_en_communs/peinture1.jpg" width="400">
-            <p>Abstrait</p>
+            <p>Abstrait 1</p>
         </div>
         <div class="image2 ">
             <img src="../Ressources_en_communs/peinture2.jpg" width="400">
@@ -41,7 +41,7 @@
         </div>
         <p>Scannez le QR code pour vous rendre sur notre Linktree</p>
         <div class="qrcode">
-            <a href="https://linktr.ee/museum_effect" target="_blank"><img src="../Ressources_en_communs/qr_code.png" alt="QR Code" width="150">
+            <img src="../Ressources_en_communs/qr_code.png" alt="QR Code" width="150">
         </div>
     </div>
     <button id="backToTop">↑</button>
@@ -137,9 +137,6 @@
             const progress = (scrollTop / docHeight) * 100;
             document.getElementById('progressBar').style.height = `${progress}%`;
         });
-
-    </script>
-    <script>
         const image = document.querySelectorAll('.container img');
 
         images.forEach((image) => {
