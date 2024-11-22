@@ -35,14 +35,14 @@ p {
 }
 
 footer p {
-    font-size: 0.5em;
+    font-size: 0.75em;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 footer a {
     display: flex;
-    font-size: 0.5em;
+    font-size: 0.75em;
     justify-content: center;
     padding-bottom: 50px;
 
@@ -105,7 +105,7 @@ footer a {
     display: flex;
     position: absolute;
     width: max-content;
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .slider img {
