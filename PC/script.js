@@ -134,3 +134,11 @@ sliderImages.forEach(image => {
         image.style.boxShadow = '';
     });
 });
+const boutton = document.querySelector('.bouttoncontact');
+boutton.addEventListener('click', (event) => {
+    event.preventDefault();
+    const confirmation = confirm('Voulez-vous vraiment accéder à la page Nous contacter ?');
+    if (confirmation) {
+        window.location.href = boutton.getAttribute('href');
+    }
+});
