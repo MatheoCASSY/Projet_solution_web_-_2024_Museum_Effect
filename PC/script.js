@@ -51,7 +51,9 @@ qrCode.addEventListener('mouseleave', () => {
     qrCode.style.boxShadow = '';
 });
 const backToTop = document.getElementById('backToTop');
-
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
         backToTop.style.display = 'block';
