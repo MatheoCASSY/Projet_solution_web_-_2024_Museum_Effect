@@ -1,0 +1,178 @@
+html {
+    background-color: rgb(199, 189, 167);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border: black solid;
+    border-radius: 50px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 1em;
+}
+
+p {
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    display: flex;
+    font-size: 0.75em;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.peinture1 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture3 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture4 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.peinture5 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.qrcode {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.slider img {
+    flex-shrink: 0;
+    width: max-content;
+    height: 200px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+.bouttoncontact {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5733;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.bouttoncontact:hover {
+    background-color: #C70039;
+    transform: scale(1.05);
+}
+
+.bouttoncontact:active {
+    transform: scale(0.95);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTop:hover {
+    background: #C70039;
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: #FF5733;
+    z-index: 1000;
+}
