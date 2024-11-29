@@ -59,29 +59,13 @@ footer a {
     align-items: center;
 }
 
-.peinture1 {
-    padding: 10px;
-    margin: 10px;
-}
-
-.peinture2 {
-    padding: 10px;
-    margin: 10px;
-}
-
-.peinture3 {
-    padding: 10px;
-    margin: 10px;
-}
-
-.peinture4 {
-    padding: 10px;
-    margin: 10px;
-}
-
+.peinture1,
+.peinture2,
+.peinture3,
+.peinture4,
 .peinture5 {
     padding: 10px;
-    margin: 10px;
+    margin: 30px;
 }
 
 .qrcode {
