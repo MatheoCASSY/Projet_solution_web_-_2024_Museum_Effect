@@ -2,11 +2,6 @@ html {
     background-color: rgb(199, 189, 167);
 }
 
-html,
-body {
-    overflow-x: hidden;
-}
-
 header {
     display: flex;
     justify-content: center;
@@ -62,32 +57,27 @@ footer a {
 }
 
 .container {
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Colonnes adaptatives */
     gap: 20px;
-    /* Espacement entre les éléments */
     padding: 50px;
     justify-items: center;
-    /* Centrer les images dans chaque cellule */
     align-items: center;
 }
 
 .container img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 50px;
     justify-items: center;
     align-items: center;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 
