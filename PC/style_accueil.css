@@ -16,6 +16,10 @@ header a {
     padding: 15px;
 }
 
+header :hover {
+    color: rgba(255, 87, 51, 1);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.75em;
