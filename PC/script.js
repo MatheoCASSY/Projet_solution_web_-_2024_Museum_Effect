@@ -94,3 +94,9 @@ boutton.addEventListener('click', (event) => {
         window.location.href = boutton.getAttribute('href');
     }
 });
+
+document.querySelectorAll('.flashcard').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
