@@ -33,6 +33,18 @@ window.addEventListener('scroll', () => {
     document.getElementById('progressBar').style.height = `${progress}%`;
 });
 
+const backToTop = document.getElementById('backToTop');
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
 // Gestion de l'animation pour éviter les décalages
 const images = document.querySelectorAll('.container img');
 images.forEach((image) => {
