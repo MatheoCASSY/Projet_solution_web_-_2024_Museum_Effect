@@ -99,6 +99,11 @@ footer a {
     box-shadow: 0 0 25px rgba(255, 87, 51, 1);
 }
 
+.copyright {
+    text-decoration: underline;
+    color: black;
+}
+
 .slider-container {
     margin-top: 50px;
     width: 100%;
