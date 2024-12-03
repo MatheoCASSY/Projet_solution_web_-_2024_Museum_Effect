@@ -2,6 +2,11 @@ html {
     background-color: rgb(199, 189, 167);
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 header {
     display: flex;
     justify-content: center;
