@@ -59,6 +59,10 @@ footer a {
     align-items: center;
 }
 
+.container img {
+    margin: 30px;
+}
+
 .peinture1,
 .peinture2,
 .peinture3,
