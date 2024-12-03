@@ -57,28 +57,46 @@ footer a {
 }
 
 .container {
-    padding-top: 50px;
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonnes adaptatives */
+    gap: 20px;
+    /* Espacement entre les éléments */
+    padding: 50px;
+    justify-items: center;
+    /* Centrer les images dans chaque cellule */
     align-items: center;
 }
 
 .container img {
-    margin: 30px;
+    width: 100%;
+    /* Les images remplissent leur cellule */
+    max-width: 300px;
+    /* Limite de largeur pour éviter des images trop grandes */
+    border-radius: 10px;
+    /* Coins arrondis pour un effet esthétique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre autour des images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transition pour hover */
 }
 
-.peinture1,
-.peinture2,
-.peinture3,
-.peinture4,
-.peinture5 {
-    padding: 10px;
-    margin: 30px;
+.container img:hover {
+    transform: scale(1.1);
+    /* Zoom sur hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Ombre plus marquée au survol */
 }
+
 
 .qrcode {
     display: flex;
     justify-content: center;
+}
+
+.qrcode :hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 87, 51, 1);
 }
 
 .slider-container {
