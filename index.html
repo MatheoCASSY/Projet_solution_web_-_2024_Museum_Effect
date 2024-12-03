@@ -13,10 +13,12 @@
             min-height: 100vh;
             background-color: #f4f4f4;
             margin: 0;
+    
         }
 
         .flashcard-container {
             perspective: 1000px; /* Pour l'effet 3D */
+            
         }
 
         .flashcard {
@@ -27,6 +29,11 @@
             transform: rotateY(0deg);
             transition: transform 0.6s ease; /* Animation fluide */
             cursor: pointer;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
 
         .flashcard.is-flipped {
@@ -68,6 +75,32 @@
     </style>
 </head>
 <body>
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <!-- Face avant avec une image -->
+            <div class="front">
+                <img src="https://via.placeholder.com/200x300" alt="Image de la question">
+            </div>
+            <!-- Face arrière avec du texte -->
+            <div class="back">
+                C'est la réponse !
+            </div>
+        </div>
+    </div>
+
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <!-- Face avant avec une image -->
+            <div class="front">
+                <img src="https://via.placeholder.com/200x300" alt="Image de la question">
+            </div>
+            <!-- Face arrière avec du texte -->
+            <div class="back">
+                C'est la réponse !
+            </div>
+        </div>
+    </div>
+
     <div class="flashcard-container">
         <div class="flashcard" onclick="flipCard(this)">
             <!-- Face avant avec une image -->
