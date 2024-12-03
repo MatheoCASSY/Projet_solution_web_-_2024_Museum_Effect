@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards with Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .flashcard-container {
+            perspective: 1000px; /* Pour l'effet 3D */
+        }
+
+        .flashcard {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.6s ease; /* Animation fluide */
+            cursor: pointer;
+        }
+
+        .flashcard.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard .front,
+        .flashcard .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Empêche l'arrière d'apparaître quand on voit l'avant */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* S'assurer que l'image reste dans les bordures */
+        }
+
+        .flashcard .front {
+            background-color: #ffffff;
+        }
+
+        .flashcard .front img {
+            width: 100%; /* L'image prend toute la largeur de la carte */
+            height: 100%; /* L'image prend toute la hauteur de la carte */
+            object-fit: cover; /* L'image reste proportionnelle, même si elle est recadrée */
+        }
+
+        .flashcard .back {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            transform: rotateY(180deg); /* Retourne la face arrière */
+        }
+    </style>
+</head>
+<body>
+    <div class="flashcard-container">
+        <div class="flashcard" onclick="flipCard(this)">
+            <!-- Face avant avec une image -->
+            <div class="front">
+                <img src="https://via.placeholder.com/200x300" alt="Image de la question">
+            </div>
+            <!-- Face arrière avec du texte -->
+            <div class="back">
+                C'est la réponse !
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle('is-flipped'); // Ajoute ou enlève la classe pour retourner la carte
+        }
+    </script>
+</body>
+</html>
