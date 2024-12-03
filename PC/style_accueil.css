@@ -72,10 +72,12 @@ footer a {
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 100px;
     padding: 50px;
     justify-items: center;
     align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 
@@ -198,8 +200,8 @@ footer a {
 }
 
 .flashcard {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 500px;
     perspective: 1000px;
 }
 
