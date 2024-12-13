@@ -19,8 +19,11 @@ header a {
     color: black;
     text-decoration: none;
     padding: 15px;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 20px;
+}
+
+header :hover {
+    color: rgba(255, 87, 51, 1);
 }
 
 body {
@@ -40,15 +43,14 @@ p {
 }
 
 footer p {
-    font-size: 0.75em;
+    font-size: 1em;
     text-align: center;
     margin-top: 50px;
-    color: black;
 }
 
 footer a {
     display: flex;
-    font-size: 0.75em;
+    font-size: 1em;
     justify-content: center;
     padding-bottom: 50px;
 }
@@ -63,35 +65,21 @@ footer a {
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Colonnes adaptatives */
-    gap: 20px;
-    /* Espacement entre les éléments */
+    gap: 100px;
     padding: 50px;
     justify-items: center;
-    /* Centrer les images dans chaque cellule */
     align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .container img {
     width: 100%;
-    /* Les images remplissent leur cellule */
     max-width: 300px;
-    /* Limite de largeur pour éviter des images trop grandes */
     border-radius: 10px;
-    /* Coins arrondis pour un effet esthétique */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Ombre autour des images */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transition pour hover */
 }
-
-.container img:hover {
-    transform: scale(1.1);
-    /* Zoom sur hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* Ombre plus marquée au survol */
-}
-
 
 .qrcode {
     display: flex;
@@ -114,21 +102,25 @@ footer a {
     height: 200px;
     overflow: hidden;
     position: relative;
-    background-color: #f0f0f0;
+    background-color: rgb(199, 189, 167);
+    overflow: visible;
 }
 
 .slider {
     display: flex;
     position: absolute;
     width: max-content;
-    animation: scroll 15s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 .slider img {
+    margin: 0 15px;
     flex-shrink: 0;
     width: max-content;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 @keyframes scroll {
@@ -166,6 +158,7 @@ footer a {
     transform: scale(0.95);
 }
 
+
 #backToTop {
     position: fixed;
     bottom: 20px;
@@ -191,4 +184,78 @@ footer a {
     height: 0;
     background: #FF5733;
     z-index: 1000;
+}
+
+.slider img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(255, 87, 51, 1);
+    z-index: 1;
+}
+
+
+.slider img.highlight {
+    transform: scale(1.3);
+    box-shadow: 0 0 25px rgba(255, 87, 51, 1);
+    z-index: 1;
+}
+
+.flashcard {
+    width: 200px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flashcard div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.6s;
+}
+
+.flashcard .front {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flashcard .back {
+    background-color: #ce906a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+.flashcard:hover div {
+    transform: rotateY(180deg);
+}
+
+.flashcard:hover .back {
+    transform: rotateY(0);
+}
+
+.flashcard.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .back {
+    transform: rotateY(0);
+}
+
+.flashcard p{
+    font-size: 20px ; /* taille texte dans flashcard */
 }
