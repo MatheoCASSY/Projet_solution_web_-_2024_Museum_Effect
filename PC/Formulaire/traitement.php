@@ -29,5 +29,8 @@ try {
     }
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
-}
+};
+sleep(3);
+
+header('Location: ../../index.html');
 ?>
