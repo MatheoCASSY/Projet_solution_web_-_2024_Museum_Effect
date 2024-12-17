@@ -1,25 +1,3 @@
-// Custom Cursor
-const cursor = document.createElement('div');
-cursor.id = 'customCursor';
-document.body.appendChild(cursor);
-
-document.addEventListener('mousemove', (e) => {
-    const cursorX = e.pageX;
-    const cursorY = e.pageY;
-    cursor.style.left = `${cursorX}px`;
-    cursor.style.top = `${cursorY}px`;
-});
-
-cursor.style.position = 'absolute';
-cursor.style.width = '30px';
-cursor.style.height = '30px';
-cursor.style.borderRadius = '50%';
-cursor.style.backgroundColor = '#FF5733';
-cursor.style.pointerEvents = 'none';
-cursor.style.zIndex = '1000';
-cursor.style.transition = 'transform 0.1s ease';
-cursor.style.transform = 'translate(-50%, -50%)';
-
 // Progress Bar
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;

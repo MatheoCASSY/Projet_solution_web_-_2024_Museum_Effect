@@ -328,3 +328,45 @@ footer a {
     font-weight: 700;
     font-style: italic;
   }
+  #musees .museum {
+    margin-bottom: 20px;
+}
+
+#musees .museum h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+#musees .museum .museum-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#musees .museum img {
+    width: 50%;
+    height: auto;
+}
+
+#musees .museum .museum-info {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 30%;
+}
+
+#musees .museum .museum-info p {
+    margin: 0;
+}
+
+#musees .museum .museum-content .museum-info {
+    display: block;
+}
+
+#musees p {
+    margin: 0;
+    font-size: 20px;
+    text-align: right;
+
+}
