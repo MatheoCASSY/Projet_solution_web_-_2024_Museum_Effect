@@ -1,3 +1,4 @@
+// Custom Cursor
 const cursor = document.createElement('div');
 cursor.id = 'customCursor';
 document.body.appendChild(cursor);
@@ -19,6 +20,7 @@ cursor.style.zIndex = '1000';
 cursor.style.transition = 'transform 0.1s ease';
 cursor.style.transform = 'translate(-50%, -50%)';
 
+// Progress Bar
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -27,18 +29,28 @@ window.addEventListener('scroll', () => {
     document.getElementById('progressBar').style.height = `${progress}%`;
 });
 
-const backToTop = document.getElementById('backToTop');
-backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        backToTop.style.display = 'block';
-    } else {
-        backToTop.style.display = 'none';
+// Back to Top Button
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.getElementById('backToTop');
+
+    if (backToTopButton) {
+        // Afficher ou cacher le bouton au scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Retour en haut au clic
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 });
 
+// Image Scaling on Hover
 const images = document.querySelectorAll('.container img');
 images.forEach((image) => {
     image.addEventListener('mouseenter', () => {
@@ -51,29 +63,18 @@ images.forEach((image) => {
     });
 });
 
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-
-    document.getElementById('progressBar').style.height = `${progress}%`;
-});
-
+// Slider Pause on Hover
 const slider = document.querySelector('.slider');
-let isPaused = false;
-
 slider.addEventListener('mouseenter', () => {
-    isPaused = true;
     slider.style.animationPlayState = 'paused';
 });
 
 slider.addEventListener('mouseleave', () => {
-    isPaused = false;
     slider.style.animationPlayState = 'running';
 });
 
+// Highlight Slider Images on Hover
 const sliderImages = document.querySelectorAll('.slider img');
-
 sliderImages.forEach(image => {
     image.addEventListener('mouseenter', () => {
         image.style.transform = 'scale(1.3)';
@@ -86,15 +87,17 @@ sliderImages.forEach(image => {
     });
 });
 
-const boutton = document.querySelector('.bouttoncontact');
-boutton.addEventListener('click', (event) => {
+// Contact Button Confirmation
+const contactButton = document.querySelector('.bouttoncontact');
+contactButton.addEventListener('click', (event) => {
     event.preventDefault();
     const confirmation = confirm('Voulez-vous vraiment accéder à la page Nous contacter ?');
     if (confirmation) {
-        window.location.href = boutton.getAttribute('href');
+        window.location.href = contactButton.getAttribute('href');
     }
 });
 
+// Flashcard Flip on Click
 document.querySelectorAll('.flashcard').forEach(card => {
     card.addEventListener('click', () => {
         card.classList.toggle('flipped');
