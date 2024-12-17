@@ -85,7 +85,11 @@ footer a {
     justify-content: center;
 }
 
-.qrcode :hover {
+.qrcode img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qrcode img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(255, 87, 51, 1);
 }
@@ -256,6 +260,7 @@ footer a {
     transform: rotateY(0);
 }
 
-.flashcard p{
-    font-size: 20px ; /* taille texte dans flashcard */
+.flashcard p {
+    font-size: 20px;
+    /* taille texte dans flashcard */
 }
